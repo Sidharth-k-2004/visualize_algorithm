@@ -1,0 +1,20 @@
+.avatar-creator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar-viewer {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .customize-options {
+    margin: 20px 0;
+  }
+  
+  .customize-options label {
+    display: block;
+    margin: 10px 0;
+  }
+  

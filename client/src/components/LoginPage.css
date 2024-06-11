@@ -1,0 +1,129 @@
+/* Background with gradient */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #4747a5, #ffffff);
+  }
+  
+
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
+  }
+  
+  
+  /* Rotate glare animation */
+  @keyframes rotateGlare {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .glassyText {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Input fields styling */
+  /* .input {
+    display: block;
+    width: 90%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    color: white;
+    font-size: 1rem;
+    z-index: 1;
+    position: relative;
+  } */
+  .inputContainer {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input field styling */
+  .input {
+    width: 100%;
+    padding: 12px 40px 12px 40px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust icon position */
+    background-size: 16px; /* Decrease icon size */
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+  }
+  
+  /* Input field focus style */
+  .input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Button styling */
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .button:hover {
+    background: linear-gradient(145deg, #2a5298, #1e3c72);
+  }
+  
+  /* Signup text and link styling */
+  .signupText {
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .signupLink {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
