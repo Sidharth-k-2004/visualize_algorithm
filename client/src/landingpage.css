@@ -1,0 +1,242 @@
+
+.bgimage {
+  background-image: url('./bgimage.png'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  justify-content: flex-start; /* Justify content to the start (top) */
+  text-align: left; /* Align text to the left */
+  color: white; /* Fallback color for text */
+  position: relative;
+  padding: 20px; /* Add padding to prevent text from touching the edges */
+}
+
+/* Gradient text style */
+.gradient-text {
+  font-size: 5em;
+  font-weight: bold;
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  background: linear-gradient(to right, 
+  #D4145A 0%, 
+  #DC364F 10%, 
+  #E45744 20%, 
+  #EC793A 30%, 
+  #F49B30 40%, 
+  #F4A42E 50%, 
+  #F6AD2B 60%, 
+  #F7B629 70%, 
+  #F8BF26 80%, 
+  #FAC823 90%, 
+  #FBB03B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+  opacity: 0; /* Initially hidden */
+  animation: text-appear 1s ease-in-out forwards 2s; /* Start animation after 2s */
+}
+@keyframes text-appear {
+  from { opacity: 0; letter-spacing: 10px; }
+  to { opacity: 1; letter-spacing: 1px; }
+} 
+/* Title container */
+.title {
+  position: relative;
+  top: 50px; 
+  left: 250px; 
+}
+
+/* Content text style */
+.content {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: 100px;
+  /*max-width: 1600px;*/
+  z-index: 1;
+  position: relative;
+  top: 50px; 
+  left: 200px;
+  color:#C6EA8D;
+}
+
+.typewriter.line1 {
+  max-width: 1200px;
+}
+.typewriter.line2{
+  max-width: 2000px;
+}
+.typewriter {
+  max-width: 100%; /* Adjust as needed */
+  animation: typing 6s steps(60) forwards, blink 0.5s step-end infinite alternate;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "Playwrite IS", cursive;
+  font-size: 1.7em;
+  line-height: 1.5; /* Adjust line height */
+  word-wrap: break-word; /* Enable wrapping */
+  visibility: hidden; /* Initially hidden */
+}
+
+.typewriter.visible {
+  visibility: visible;
+}
+.typewriter.no-border {
+  animation: typing 6s steps(60) forwards, blink 0.5s step-end infinite alternate, border-fade-out 1s forwards 0.3s;
+}
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@keyframes border-fade-out {
+  0% { border-right-color: rgb(113, 109, 109); }
+  100% { border-right-color: transparent; }
+}
+
+.btn {
+  position: absolute;
+  bottom: 360px;
+  right: 360px;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-family: "Playwrite FR Moderne", cursive;
+  font-optical-sizing: auto;
+  color: white;
+  background-color: transparent; 
+  border: 2px solid; 
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 5s ease, color 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  animation: button-appear 1s ease-in-out forwards; /* Add animation to make it appear */
+}
+
+@keyframes button-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.btn:hover {
+  background: linear-gradient(to right, 
+  #FF512F 0%, 
+  #F7553F 10%, 
+  #EF5950 20%, 
+  #E75D61 30%, 
+  #DF6172 40%, 
+  #D76583 50%, 
+  #CF6994 60%, 
+  #C76DA5 70%, 
+  #BF71B6 80%, 
+  #B775C7 90%, 
+  #DD2476 100%); 
+  color: #C6EA8D; 
+  border: #C6EA8D;
+}
+
+/* Lines container */
+.lines {
+  position: absolute;
+  top: 75px; /* Adjust this value to match the top position of the title */
+  left: -50px; /* Adjust this value to match the left position of the title */
+  width: 650px; /* Adjust according to your text width */
+  height: 140px; /* Adjust according to your text height */
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Style for each line element */
+.line {
+  position: absolute;
+  background: linear-gradient(to right, 
+  #FF512F 0%, 
+  #F7553F 10%, 
+  #EF5950 20%, 
+  #E75D61 30%, 
+  #DF6172 40%, 
+  #D76583 50%, 
+  #CF6994 60%, 
+  #C76DA5 70%, 
+  #BF71B6 80%, 
+  #B775C7 90%, 
+  #DD2476 100%);
+  opacity: 0;
+}
+
+.line.top, .line.bottom {
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.line.left, .line.right {
+  top: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.line.top {
+  top: 0;
+  animation: grow-top 1s ease-in-out forwards 0.5s, shrink-top 1s ease-in-out forwards 4s;
+}
+
+.line.bottom {
+  bottom: 0;
+  animation: grow-bottom 1s ease-in-out forwards 0.5s, shrink-bottom 1s ease-in-out forwards 4s;
+}
+
+.line.left {
+  left: 0;
+  animation: grow-left 1s ease-in-out forwards 0.5s, shrink-left 1s ease-in-out forwards 4s;
+}
+
+.line.right {
+  right: 0;
+  animation: grow-right 1s ease-in-out forwards 0.5s, shrink-right 1s ease-in-out forwards 4s;
+}
+
+@keyframes grow-top {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+@keyframes grow-bottom {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+@keyframes grow-left {
+  from { height: 0; opacity: 0; }
+  to { height: 100%; opacity: 1; }
+}
+
+@keyframes grow-right {
+  from { height: 0; opacity: 0; }
+  to { height: 100%; opacity: 1; }
+}
+
+@keyframes shrink-top {
+  to { width: 0; opacity: 0; }
+}
+
+@keyframes shrink-bottom {
+  to { width: 0; opacity: 0; }
+}
+
+@keyframes shrink-left {
+  to { height: 0; opacity: 0; }
+}
+
+@keyframes shrink-right {
+  to { height: 0; opacity: 0; }
+}
